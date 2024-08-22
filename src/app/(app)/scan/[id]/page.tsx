@@ -97,7 +97,7 @@ const ScanPage = ({ params }: ScanPageProps) => {
       statusText = 'Uh-ho! No profile found for this tag.';
     } else {
       statusText = `Opening ${profile.type} - ${profile.url} in a new tab!`;
-      window.open(profile.url, '_blank'); // remove the _blank to open in same tab
+      window.location.href = profile.url;
     }
   }
 
